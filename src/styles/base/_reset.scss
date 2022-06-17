@@ -15,12 +15,15 @@
 }
 
 /* Set core body defaults */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   text-rendering: optimizespeed;
   line-height: 1.5;
   background-color: $col-grey-3;
   font-family: $font-regular;
-  scroll-behavior: smooth;
 }
 
 main {

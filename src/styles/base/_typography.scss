@@ -9,6 +9,7 @@
 
 @mixin nav-link {
   font-size: to-rem(18px);
+  line-height: to-rem(29px);
 }
 @mixin hero-text {
   font-size: to-rem(19px);
@@ -45,3 +46,4 @@
   font-size: to-rem(21px);
   line-height: to-rem(34px);
 }
+

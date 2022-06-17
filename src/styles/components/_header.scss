@@ -37,7 +37,9 @@ header {
     &__link {
       @include nav-link;
 
+      color: $col-primary;
       margin: 0 to-rem(30px);
+      display: inline-block;
       cursor: pointer;
     }
 
@@ -81,6 +83,7 @@ header {
 
     color: $col-grey-3;
     margin-bottom: to-rem(35px);
+    margin-top: to-rem(20px);
   }
 
   &__image {
