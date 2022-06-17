@@ -1,3 +1,4 @@
+/* stylelint-disable color-function-notation */
 section {
   padding-top: to-rem(120px);
 }
@@ -68,6 +69,8 @@ section {
     }
   }
 }
+
+// INDOOR CATEGORY
 
 .indoor-category {
   &__title {
@@ -164,6 +167,126 @@ section {
       & svg {
         transform: translateX(to-rem(2px));
       }
+    }
+  }
+}
+
+// SERVE SECTION
+
+.serve {
+  margin-top: to-rem(150px);
+
+  &__title {
+    @include section-title;
+
+    color: $col-primary;
+    margin-bottom: to-rem(100px);
+    text-align: center;
+  }
+
+  &__subtitle {
+    @include section-title-3;
+
+    color: $col-primary;
+    margin-bottom: to-rem(25px);
+    font-weight: 400;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(to-rem(200px), 1fr));
+    column-gap: to-rem(20px);
+  }
+
+  &__feature {
+    border-radius: to-rem(12px);
+    padding: to-rem(60px) to-rem(30px);
+    background-color: $col-white;
+    box-shadow: 0 0 3px 10px rgba(255, 255, 255, 70%);
+    height: to-rem(450px);
+
+    & img {
+      width: to-rem(100px);
+      height: to-rem(100px);
+      margin-bottom: to-rem(30px);
+    }
+
+    &--green {
+      background-color: $col-primary;
+      box-shadow: 0 3px 3px 1px rgba(7, 20, 15, 70%);
+
+      & h3 {
+        color: $col-grey-2;
+      }
+
+      & p {
+        color: $col-grey;
+      }
+    }
+  }
+}
+
+.expendiency {
+  margin-top: to-rem(150px);
+
+  &__title {
+    @include section-title;
+
+    color: $col-primary;
+    margin-bottom: to-rem(80px);
+    text-align: center;
+  }
+
+  &__subtitle {
+    @include section-title-3;
+
+    color: $col-primary;
+    margin: to-rem(25px) 0 to-rem(12px) 0;
+    font-weight: 400;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(to-rem(200px), 1fr));
+    column-gap: to-rem(150px);
+    margin: 0 auto;
+    width: 85%;
+  }
+
+  &__feature {
+    text-align: center;
+
+    & p {
+      @include nav-link;
+
+      color: $col-primary;
+    }
+  }
+
+  &__illustration {
+    width: to-rem(80px);
+    height: to-rem(80px);
+    border-radius: to-rem(15px);
+    padding: to-rem(18px);
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &--1 {
+      background-color: $col-red;
+    }
+
+    &--2 {
+      background-color: $col-purple;
+    }
+
+    &--3 {
+      background-color: $col-cyan;
     }
   }
 }
