@@ -14,5 +14,34 @@
   font-size: to-rem(19px);
   line-height: to-rem(31px);
   font-weight: 400;
-  
+}
+
+@mixin desc-text {
+  font-size: to-rem(18px);
+  line-height: to-rem(32px);
+}
+
+@mixin desc-text-2 {
+  font-size: to-rem(17px);
+  line-height: to-rem(17px);
+}
+
+@mixin footer-text {
+  font-size: to-rem(16px);
+  line-height: to-rem(25px);
+}
+
+@mixin section-title {
+  font-size: to-rem(44px);
+  line-height: to-rem(71px);
+  font-weight: 400;
+}
+
+@mixin section-title-2 {
+  font-size: to-rem(31px);
+  line-height: to-rem(50px);
+}
+@mixin section-title-3 {
+  font-size: to-rem(21px);
+  line-height: to-rem(34px);
 }
