@@ -1,0 +1,122 @@
+header {
+  background-color: $col-primary;
+  width: 100%;
+  height: 100vh;
+
+  .nav {
+    display: grid;
+    grid-template-columns: 37% 63%;
+
+    &__logo {
+      padding: to-rem(7px);
+      margin-right: to-rem(81px);
+
+      & img {
+        margin: 0 auto;
+        width: to-rem(180px);
+        height: to-rem(60px);
+      }
+    }
+
+    &__menu {
+      height: to-rem(85px);
+      color: $col-primary;
+      background-color: $col-grey;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 to-rem(100px);
+
+      & ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    &__link {
+      @include nav-link;
+
+      margin: 0 to-rem(30px);
+      cursor: pointer;
+    }
+
+    &__icon {
+      width: to-rem(20px);
+      height: to-rem(30px);
+      margin: 0 to-rem(17px);
+    }
+  }
+}
+
+.hero {
+  padding: to-rem(32px) 0;
+  height: calc(100vh - to-rem(85px));
+  display: flex;
+  justify-content: space-between;
+
+  &__content {
+    padding: to-rem(90px) 0;
+    width: 40%;
+  }
+
+  &__heading {
+    @include heading;
+
+    color: $col-grey-2;
+    line-height: 1.2;
+    margin-bottom: to-rem(10px);
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 2;
+
+    & span {
+      display: block;
+    }
+  }
+
+  &__text {
+    @include hero-text;
+
+    color: $col-grey-3;
+    margin-bottom: to-rem(35px);
+  }
+
+  &__image {
+    background-image: url("../assets/images/hero-bg.png");
+    height: 100%;
+    width: to-rem(600px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 70px;
+      width: 70px;
+      background-image: url("../assets/images/yellow-leaf.png");
+      background-size: cover;
+      bottom: to-rem(-20px);
+      left: to-rem(-30px);
+    }
+  }
+}
+
+.green {
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: to-rem(190px);
+    background-image: url("../assets/images/green-leaf.png");
+    background-size: cover;
+    height: 70px;
+    width: 70px;
+    z-index: -1;
+  }
+}

@@ -1,0 +1,18 @@
+@mixin heading {
+  font-size: to-rem(72px);
+  font-weight: 700;
+}
+
+@mixin text {
+  font-size: to-rem(20px);
+}
+
+@mixin nav-link {
+  font-size: to-rem(18px);
+}
+@mixin hero-text {
+  font-size: to-rem(19px);
+  line-height: to-rem(31px);
+  font-weight: 400;
+  
+}

@@ -1,0 +1,28 @@
+.button {
+  border-radius: to-rem(7px);
+  border: 2px solid $col-orange;
+  height: to-rem(65px);
+  width: to-rem(220px);
+  margin-right: to-rem(30px);
+  color: $col-orange;
+  transition: all 0.3s linear;
+
+  @include hero-text;
+
+  &--cream {
+    background-color: $col-orange;
+    color: $col-primary;
+
+    &:hover {
+      background: transparent;
+      color: $col-orange;
+    }
+  }
+
+  &--green {
+    &:hover {
+      background-color: $col-orange;
+      color: $col-primary;
+    }
+  }
+}
