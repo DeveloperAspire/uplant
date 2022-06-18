@@ -1,0 +1,32 @@
+.link {
+  @include nav-link;
+
+  color: $col-primary;
+  display: inline-flex;
+  align-items: center;
+  border-bottom: 2px solid $col-orange;
+  transition: border 0.3s ease-in-out;
+
+  &--secondary {
+    color: $col-white;
+    border-bottom: 1px solid $col-orange;
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
+  & span {
+    margin-right: to-rem(5px);
+  }
+
+  & svg {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover {
+    & svg {
+      transform: translateX(to-rem(2px));
+    }
+  }
+}

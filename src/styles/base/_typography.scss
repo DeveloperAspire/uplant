@@ -41,9 +41,10 @@
 @mixin section-title-2 {
   font-size: to-rem(31px);
   line-height: to-rem(50px);
+  font-weight: 400;
 }
 @mixin section-title-3 {
   font-size: to-rem(21px);
   line-height: to-rem(34px);
+  font-weight: 400;
 }
-

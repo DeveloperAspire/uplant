@@ -144,7 +144,6 @@ section {
   &__view-more-container {
     text-align: center;
     margin-top: to-rem(90px);
-    margin-bottom: to-rem(70px);
   }
 
   &__view-more {
@@ -189,7 +188,6 @@ section {
 
     color: $col-primary;
     margin-bottom: to-rem(25px);
-    font-weight: 400;
   }
 
   &__container {
@@ -242,7 +240,6 @@ section {
 
     color: $col-primary;
     margin: to-rem(25px) 0 to-rem(12px) 0;
-    font-weight: 400;
   }
 
   &__container {
@@ -288,5 +285,32 @@ section {
     &--3 {
       background-color: $col-cyan;
     }
+  }
+}
+
+// BRANDS
+
+.brands {
+  margin-top: to-rem(150px);
+  padding: to-rem(80px) 0;
+  background-color: $col-primary;
+
+  &__title {
+    @include section-title-2;
+
+    color: $col-white;
+    margin-bottom: to-rem(80px);
+    text-align: center;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__stories {
+    text-align: center;
+    margin-top: to-rem(90px);
   }
 }
