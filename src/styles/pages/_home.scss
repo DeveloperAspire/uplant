@@ -224,6 +224,8 @@ section {
   }
 }
 
+// EXPENDIENCY SECTION
+
 .expendiency {
   margin-top: to-rem(150px);
 
@@ -285,6 +287,109 @@ section {
     &--3 {
       background-color: $col-cyan;
     }
+  }
+}
+
+// TESTIMONIAL SECTION
+.testimonial {
+  margin-top: to-rem(120px);
+  background-color: $col-white;
+
+  &__title {
+    @include section-title;
+
+    color: $col-primary;
+    margin-bottom: to-rem(20px);
+    text-align: center;
+  }
+
+  &__container {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: to-rem(50px);
+      height: to-rem(50px);
+      background-size: cover;
+    }
+
+    &::before {
+      background-image: url("../assets/images/green-square.svg");
+      left: to-rem(-120px);
+      top: to-rem(-30px);
+    }
+
+    &::after {
+      background-image: url("../assets/images/yellow-square.svg");
+      right: to-rem(-100px);
+      top: to-rem(-30px);
+    }
+  }
+
+  &__text {
+    @include desc-text-3;
+
+    color: $col-grey-5;
+    text-align: center;
+    position: relative;
+
+    & .quote {
+      position: absolute;
+      z-index: 2;
+      width: to-rem(30px);
+      height: to-rem(30px);
+
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+
+      &--left {
+        left: to-rem(-24px);
+        top: to-rem(-10px);
+      }
+
+      &--right {
+        right: 0;
+        bottom: to-rem(-10px);
+        width: to-rem(23px);
+        height: to-rem(23px);
+      }
+    }
+  }
+
+  &__client {
+    margin: to-rem(30px) auto 0 auto;
+    // width: 50%;
+    text-align: center;
+  }
+
+  &__client-photo {
+    width: to-rem(60px);
+    height: to-rem(60px);
+    border-radius: 50%;
+    outline: 1px solid hsl(0deg, 1%, 64%);
+    outline-offset: to-rem(2px);
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &__client-name {
+    @include section-title-4;
+
+    margin-top: to-rem(30px);
+    color: $col-primary;
+    font-family: inherit;
+  }
+
+  &__client-role {
+    @include text-small;
+
+    color: $col-primary;
   }
 }
 

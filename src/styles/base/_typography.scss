@@ -6,6 +6,11 @@
 @mixin text {
   font-size: to-rem(20px);
 }
+@mixin text-small {
+  font-size: to-rem(15px);
+  line-height: to-rem(23px);
+  font-weight: 400;
+}
 
 @mixin nav-link {
   font-size: to-rem(18px);
@@ -25,6 +30,10 @@
 @mixin desc-text-2 {
   font-size: to-rem(17px);
   line-height: to-rem(17px);
+}
+@mixin desc-text-3 {
+  font-size: to-rem(18px);
+  line-height: to-rem(34px);
 }
 
 @mixin footer-text {
@@ -47,4 +56,9 @@
   font-size: to-rem(21px);
   line-height: to-rem(34px);
   font-weight: 400;
+}
+@mixin section-title-4 {
+  font-size: to-rem(15px);
+  line-height: to-rem(24px);
+  font-weight: 900;
 }

@@ -1,3 +1,14 @@
+%btn {
+  width: to-rem(35px);
+  height: to-rem(35px);
+  padding: to-rem(9px);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  top: to-rem(150px);
+  z-index: 2;
+}
+
 .button {
   border-radius: to-rem(7px);
   border: 2px solid $col-orange;
@@ -25,4 +36,18 @@
       color: $col-primary;
     }
   }
+}
+
+.prev {
+  @extend %btn;
+
+  background-color: $col-primary;
+  left: 0;
+}
+
+.next {
+  @extend %btn;
+
+  background-color: $col-orange;
+  right: 0;
 }
