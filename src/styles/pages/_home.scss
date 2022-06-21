@@ -4,8 +4,16 @@ section {
 }
 
 .about {
+  // @include respond(phone) {
+  //   padding-top: to-rem(60px);
+  // }
+
   &__divider {
     display: flex;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
   }
 
   &__gallery {
@@ -15,11 +23,20 @@ section {
     column-gap: to-rem(40px);
     row-gap: to-rem(20px);
     padding: to-rem(50px);
+
+    @include respond(phone) {
+      padding: to-rem(20px) to-rem(10px);
+      column-gap: t0-rem(5px);
+    }
   }
 
   &__content {
     margin-top: to-rem(90px);
     margin-left: to-rem(100px);
+
+    @include respond(phone) {
+      margin: 0;
+    }
   }
 
   &__title {
@@ -35,11 +52,21 @@ section {
     color: $col-dark-grey;
     margin-bottom: to-rem(30px);
     width: 62%;
+
+    @include respond(phone) {
+      width: 100%;
+      margin-bottom: to-rem(20px);
+    }
   }
 
   &__button {
     width: to-rem(200px);
     margin-top: to-rem(20px);
+
+    @include respond(phone) {
+      margin-top: to-rem(8px);
+      width: to-rem(130px);
+    }
 
     &:hover {
       color: $col-primary;
@@ -47,25 +74,58 @@ section {
   }
 
   &__img {
+    border-radius: to-rem(17px);
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+
     &--1 {
-      width: to-rem(450px);
+      width: to-rem(250px);
       height: to-rem(320px);
+
+      @include respond(phone) {
+        width: to-rem(150px);
+        height: to-rem(200px);
+      }
     }
 
     &--2 {
       width: to-rem(190px);
       height: to-rem(270px);
       transform: translateY(to-rem(-50px));
+
+      @include respond(phone) {
+        width: to-rem(120px);
+        height: to-rem(170px);
+      }
     }
 
     &--3 {
       width: to-rem(200px);
       height: to-rem(200px);
-      transform: translateY(to-rem(-25px));
+      transform: translateY(to-rem(-30px));
+
+      @include respond(phone) {
+        width: to-rem(100px);
+        height: to-rem(120px);
+        transform: translate(to-rem(30px), to-rem(-50px));
+      }
     }
 
     &--4 {
+      width: to-rem(250px);
       transform: translateY(to-rem(-140px));
+
+      @include respond(phone) {
+        transform: translate(to-rem(-20px), to-rem(-140px));
+        @include respond(phone) {
+          width: to-rem(150px);
+          height: to-rem(250px);
+        }
+      }
     }
   }
 }
@@ -89,6 +149,12 @@ section {
     width: 80%;
     margin: 0 auto;
 
+    @include respond(phone) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, to-rem(250px));
+      width: 100%;
+    }
+
     & figure {
       position: relative;
     }
@@ -103,6 +169,10 @@ section {
       color: $col-primary;
       display: grid;
       place-items: center;
+
+      @include respond(phone) {
+        @include hero-text;
+      }
     }
   }
 
@@ -125,6 +195,10 @@ section {
 
       & figcaption {
         width: 45%;
+      }
+
+      @include respond(phone) {
+        display: none;
       }
     }
 
@@ -175,12 +249,20 @@ section {
 .serve {
   margin-top: to-rem(150px);
 
+  @include respond(phone) {
+    margin-top: to-rem(70px);
+  }
+
   &__title {
     @include section-title;
 
     color: $col-primary;
     margin-bottom: to-rem(100px);
     text-align: center;
+
+    @include respond(phone) {
+      margin-bottom: to-rem(50px);
+    }
   }
 
   &__subtitle {
@@ -194,6 +276,10 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(to-rem(200px), 1fr));
     column-gap: to-rem(20px);
+
+    @include respond(phone) {
+      row-gap: to-rem(40px);
+    }
   }
 
   &__feature {
@@ -203,10 +289,26 @@ section {
     box-shadow: 0 0 3px 10px rgba(255, 255, 255, 70%);
     height: to-rem(450px);
 
+    @include respond(phone) {
+      padding: to-rem(20px) to-rem(20px);
+      height: to-rem(300px);
+    }
+
+    & p {
+      @include respond(phone) {
+        @include text-small-2;
+      }
+    }
+
     & img {
       width: to-rem(100px);
       height: to-rem(100px);
       margin-bottom: to-rem(30px);
+
+      @include respond(phone) {
+        width: to-rem(70px);
+        height: to-rem(70px);
+      }
     }
 
     &--green {
@@ -229,12 +331,20 @@ section {
 .expendiency {
   margin-top: to-rem(150px);
 
+  @include respond(phone) {
+    margin-top: to-rem(70px);
+  }
+
   &__title {
     @include section-title;
 
     color: $col-primary;
     margin-bottom: to-rem(80px);
     text-align: center;
+
+    @include respond(phone) {
+      margin-bottom: to-rem(50px);
+    }
   }
 
   &__subtitle {
@@ -250,6 +360,10 @@ section {
     column-gap: to-rem(150px);
     margin: 0 auto;
     width: 85%;
+
+    @include respond(phone) {
+      row-gap: to-rem(70px);
+    }
   }
 
   &__feature {
@@ -270,6 +384,12 @@ section {
     display: grid;
     place-items: center;
     margin: 0 auto;
+
+    @include respond(phone) {
+      width: to-rem(60px);
+      height: to-rem(60px);
+      padding: to-rem(15px);
+    }
 
     & img {
       width: 100%;
@@ -299,14 +419,18 @@ section {
     @include section-title;
 
     color: $col-primary;
-    margin-bottom: to-rem(20px);
+    margin-bottom: to-rem(50px);
     text-align: center;
   }
 
   &__container {
-    width: 70%;
+    width: 65%;
     margin: 0 auto;
     position: relative;
+
+    @include respond(phone) {
+      width: 100%;
+    }
 
     &::after,
     &::before {
@@ -315,6 +439,10 @@ section {
       width: to-rem(50px);
       height: to-rem(50px);
       background-size: cover;
+
+      @include respond(phone) {
+        display: none;
+      }
     }
 
     &::before {
@@ -336,12 +464,22 @@ section {
     color: $col-grey-5;
     text-align: center;
     position: relative;
+    padding: 0 to-rem(20px);
+
+    @include respond(phone) {
+      padding: 0;
+    }
 
     & .quote {
       position: absolute;
       z-index: 2;
       width: to-rem(30px);
       height: to-rem(30px);
+
+      @include respond(phone) {
+        width: to-rem(17px);
+        height: to-rem(17px);
+      }
 
       & img {
         width: 100%;
@@ -351,21 +489,36 @@ section {
       &--left {
         left: to-rem(-24px);
         top: to-rem(-10px);
+
+        @include respond(phone) {
+          left: to-rem(-9px);
+          top: to-rem(-35px);
+        }
       }
 
       &--right {
-        right: 0;
+        right: to-rem(-24px);
         bottom: to-rem(-10px);
         width: to-rem(23px);
         height: to-rem(23px);
+
+        @include respond(phone) {
+          right: to-rem(24px);
+          bottom: to-rem(-40px);
+          width: to-rem(15px);
+          height: to-rem(15px);
+        }
       }
     }
   }
 
   &__client {
-    margin: to-rem(30px) auto 0 auto;
-    // width: 50%;
+    margin: to-rem(80px) auto 0 auto;
     text-align: center;
+
+    @include respond(phone) {
+      margin-top: to-rem(50px);
+    }
   }
 
   &__client-photo {
@@ -376,6 +529,11 @@ section {
     outline-offset: to-rem(2px);
     text-align: center;
     margin: 0 auto;
+
+    @include respond(phone) {
+      width: to-rem(40px);
+      height: to-rem(40px);
+    }
   }
 
   &__client-name {
@@ -384,12 +542,24 @@ section {
     margin-top: to-rem(30px);
     color: $col-primary;
     font-family: inherit;
+
+    @include respond(phone) {
+      margin-bottom: to-rem(10px);
+    }
   }
 
   &__client-role {
     @include text-small;
 
     color: $col-primary;
+  }
+
+  &__hide {
+    display: none;
+  }
+
+  &__show {
+    display: block;
   }
 }
 
@@ -399,6 +569,23 @@ section {
   margin-top: to-rem(150px);
   padding: to-rem(80px) 0;
   background-color: $col-primary;
+
+  @include respond(phone) {
+    margin-top: to-rem(80px);
+  }
+
+  & figure {
+    /* stylelint-disable-next-line no-descending-specificity */
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include respond(phone) {
+      width: 60px;
+      height: 60px;
+    }
+  }
 
   &__title {
     @include section-title-2;

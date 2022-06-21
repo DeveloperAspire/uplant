@@ -1,6 +1,10 @@
 @mixin heading {
   font-size: to-rem(72px);
   font-weight: 700;
+
+  @include respond(phone) {
+    font-size: to-rem(42px);
+  }
 }
 
 @mixin text {
@@ -10,21 +14,49 @@
   font-size: to-rem(15px);
   line-height: to-rem(23px);
   font-weight: 400;
+
+  @include respond(phone) {
+    font-size: to-rem(12px);
+    line-height: to-rem(16px);
+  }
+}
+
+@mixin text-small-2 {
+  @include respond(phone) {
+    font-size: to-rem(11px);
+    line-height: to-rem(20px);
+  }
 }
 
 @mixin nav-link {
   font-size: to-rem(18px);
   line-height: to-rem(29px);
+
+  @include respond(phone) {
+    font-size: to-rem(12px);
+    line-height: to-rem(20px);
+  }
 }
+
 @mixin hero-text {
   font-size: to-rem(19px);
   line-height: to-rem(31px);
   font-weight: 400;
+
+  @include respond(phone) {
+    font-size: to-rem(13px);
+    line-height: to-rem(20px);
+  }
 }
 
 @mixin desc-text {
   font-size: to-rem(18px);
   line-height: to-rem(32px);
+
+  @include respond(phone) {
+    font-size: to-rem(14px);
+    line-height: to-rem(25px);
+  }
 }
 
 @mixin desc-text-2 {
@@ -34,17 +66,32 @@
 @mixin desc-text-3 {
   font-size: to-rem(18px);
   line-height: to-rem(34px);
+
+  @include respond(phone) {
+    font-size: to-rem(12px);
+    line-height: to-rem(23px);
+  }
 }
 
 @mixin footer-text {
   font-size: to-rem(16px);
   line-height: to-rem(25px);
+
+  @include respond(phone) {
+    font-size: to-rem(12px);
+    line-height: to-rem(23px);
+  }
 }
 
 @mixin section-title {
   font-size: to-rem(44px);
   line-height: to-rem(71px);
   font-weight: 400;
+
+  @include respond(phone) {
+    font-size: to-rem(26px);
+    line-height: to-rem(34px);
+  }
 }
 
 @mixin section-title-2 {
@@ -56,9 +103,20 @@
   font-size: to-rem(21px);
   line-height: to-rem(34px);
   font-weight: 400;
+
+  @include respond(phone) {
+    font-size: to-rem(14px);
+    line-height: to-rem(23px);
+  }
 }
+
 @mixin section-title-4 {
   font-size: to-rem(15px);
   line-height: to-rem(24px);
   font-weight: 900;
+
+  @include respond(phone) {
+    font-size: to-rem(12px);
+    line-height: to-rem(16px);
+  }
 }

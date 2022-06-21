@@ -20,6 +20,6 @@
     "selector-type-no-unknown": true,
     "comment-no-empty": true,
     "length-zero-no-unit": true,
-    "unit-allowed-list": ["rem", "px", "%", "deg", "vh", "fr", "s"]
+    "unit-allowed-list": ["rem", "px", "%", "deg", "vh", "fr", "s", "em"]
   }
 }

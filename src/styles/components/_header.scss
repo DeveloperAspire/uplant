@@ -3,9 +3,17 @@ header {
   width: 100%;
   height: 100vh;
 
+  @include respond(phone) {
+    height: auto;
+  }
+
   .nav {
     display: grid;
     grid-template-columns: 37% 63%;
+
+    @include respond(phone) {
+      display: none;
+    }
 
     &__logo {
       padding: to-rem(7px);
@@ -57,9 +65,18 @@ header {
   display: flex;
   justify-content: space-between;
 
+  @include respond(phone) {
+    flex-direction: column;
+    height: auto;
+  }
+
   &__content {
     padding: to-rem(90px) 0;
     width: 40%;
+
+    @include respond(phone) {
+      width: 100%;
+    }
   }
 
   &__heading {
@@ -84,6 +101,10 @@ header {
     color: $col-grey-3;
     margin-bottom: to-rem(35px);
     margin-top: to-rem(20px);
+
+    @include respond(phone) {
+      margin-bottom: to-rem(25px);
+    }
   }
 
   &__image {
@@ -93,6 +114,10 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+
+    @include respond(phone) {
+      display: none;
+    }
 
     &::before {
       content: "";
@@ -118,8 +143,8 @@ header {
     right: to-rem(190px);
     background-image: url("../assets/images/green-leaf.png");
     background-size: cover;
-    height: 70px;
-    width: 70px;
+    height: to-rem(70px);
+    width: to-rem(70px);
     z-index: -1;
   }
 }

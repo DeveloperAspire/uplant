@@ -2,10 +2,19 @@
   &__container {
     display: grid;
     grid-template-columns: 35% 65%;
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__details {
     padding: to-rem(50px) to-rem(150px) to-rem(70px) to-rem(70px);
+    background-color: $col-white;
+
+    @include respond(phone) {
+      padding: to-rem(40px) to-rem(30px) to-rem(40px) to-rem(40px);
+    }
   }
 
   &__logo {
@@ -20,6 +29,10 @@
 
   &__socials-wrapper {
     margin-top: to-rem(30px);
+
+    @include respond(phone) {
+      margin-top: to-rem(20px);
+    }
   }
 
   &__socials {
@@ -28,6 +41,10 @@
     justify-content: space-between;
     width: 42%;
     margin-top: to-rem(7px);
+
+    @include respond(phone) {
+      width: 50%;
+    }
   }
 
   &__social-link {
@@ -44,6 +61,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     column-gap: to-rem(100px);
+
+    @include respond(phone) {
+      row-gap: to-rem(70px);
+      padding: to-rem(70px) to-rem(10px) to-rem(50px) to-rem(50px);
+    }
 
     & ul li {
       @include footer-text;

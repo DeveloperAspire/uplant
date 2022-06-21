@@ -7,6 +7,12 @@
   bottom: 0;
   top: to-rem(150px);
   z-index: 2;
+
+  @include respond(phone) {
+    width: to-rem(25px);
+    height: to-rem(25px);
+    padding: to-rem(6px);
+  }
 }
 
 .button {
@@ -19,6 +25,12 @@
   transition: all 0.3s linear;
 
   @include hero-text;
+
+  @include respond(phone) {
+    width: to-rem(150px);
+    height: to-rem(45px);
+    margin-right: to-rem(15px);
+  }
 
   &--cream {
     background-color: $col-orange;

@@ -1,10 +1,11 @@
 // Imported all the styles
 
-@import "./abstracts/variables", "./abstracts/functions";
+@import "./abstracts/variables", "./abstracts/functions", "./abstracts/mixins";
 
 @import "./base/font", "./base/typography", "./base/reset";
 
-@import "./components/header", "./components/button", "./components/link", "./components/footer";
+@import "./components/header", "./components/button", "./components/link",
+  "./components/footer";
 
 @import "./layout/layout";
 
