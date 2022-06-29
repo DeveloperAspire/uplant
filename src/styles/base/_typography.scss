@@ -46,11 +46,6 @@
     line-height: to-rem(20px);
   }
 
-  // @include respond(tab) {
-  //   font-size: to-rem(10px);
-  //   line-height: to-rem(20px);
-  // }
-
   @include respond(phone) {
     font-size: to-rem(12px);
     line-height: to-rem(20px);
