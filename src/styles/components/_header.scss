@@ -96,7 +96,7 @@ header {
 
     &__icon {
       width: to-rem(20px);
-      height: to-rem(30px);
+      height: to-rem(20px);
       margin: 0 to-rem(17px);
 
       @include respond(max-laptop) {
