@@ -4,6 +4,10 @@
   margin: 0 auto;
   padding: 0 2rem;
 
+  @include respond(big-tab) {
+    padding: 1.5rem;
+  }
+
   @include respond(phone) {
     padding: 1rem;
   }

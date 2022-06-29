@@ -1,3 +1,12 @@
+// MOBILE NAVIGATION MENU
+const menuButton = document.querySelector(".menu");
+const navList = document.querySelector("#nav__list");
+
+menuButton.addEventListener("click", function () {
+  navList.classList.toggle("active");
+  this.classList.toggle("change-color");
+});
+
 const testimonies = document.querySelectorAll(".testimonial__box");
 
 const nextBtn = document.querySelector(".next");

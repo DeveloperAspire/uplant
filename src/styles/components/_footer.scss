@@ -12,6 +12,10 @@
     padding: to-rem(50px) to-rem(150px) to-rem(70px) to-rem(70px);
     background-color: $col-white;
 
+    @include respond(laptop) {
+      padding: to-rem(40px) to-rem(30px) to-rem(40px) to-rem(40px);
+    }
+
     @include respond(phone) {
       padding: to-rem(40px) to-rem(30px) to-rem(40px) to-rem(40px);
     }
@@ -42,6 +46,10 @@
     width: 42%;
     margin-top: to-rem(7px);
 
+    @include respond(laptop) {
+      width: 90%;
+    }
+
     @include respond(phone) {
       width: 50%;
     }
@@ -62,9 +70,16 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     column-gap: to-rem(100px);
 
+    @include respond(laptop) {
+      padding: to-rem(70px) to-rem(10px) to-rem(50px) to-rem(50px);
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      column-gap: to-rem(40px);
+    }
+
     @include respond(phone) {
       row-gap: to-rem(70px);
       padding: to-rem(70px) to-rem(10px) to-rem(50px) to-rem(50px);
+      grid-template-columns: 1fr;
     }
 
     & ul li {

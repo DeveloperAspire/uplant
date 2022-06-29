@@ -4,10 +4,6 @@ section {
 }
 
 .about {
-  // @include respond(phone) {
-  //   padding-top: to-rem(60px);
-  // }
-
   &__divider {
     display: flex;
 
@@ -24,15 +20,25 @@ section {
     row-gap: to-rem(20px);
     padding: to-rem(50px);
 
+    @include respond(laptop) {
+      padding: to-rem(20px) to-rem(10px);
+      column-gap: to-rem(5px);
+    }
+
     @include respond(phone) {
       padding: to-rem(20px) to-rem(10px);
-      column-gap: t0-rem(5px);
+      column-gap: to-rem(5px);
     }
   }
 
   &__content {
     margin-top: to-rem(90px);
     margin-left: to-rem(100px);
+
+    @include respond(laptop) {
+      margin-left: to-rem(50px);
+      margin-top: 0;
+    }
 
     @include respond(phone) {
       margin: 0;
@@ -53,7 +59,7 @@ section {
     margin-bottom: to-rem(30px);
     width: 62%;
 
-    @include respond(phone) {
+    @include respond(big-tab) {
       width: 100%;
       margin-bottom: to-rem(20px);
     }
@@ -86,7 +92,7 @@ section {
       width: to-rem(250px);
       height: to-rem(320px);
 
-      @include respond(phone) {
+      @include respond(laptop) {
         width: to-rem(150px);
         height: to-rem(200px);
       }
@@ -97,7 +103,7 @@ section {
       height: to-rem(270px);
       transform: translateY(to-rem(-50px));
 
-      @include respond(phone) {
+      @include respond(laptop) {
         width: to-rem(120px);
         height: to-rem(170px);
       }
@@ -108,7 +114,7 @@ section {
       height: to-rem(200px);
       transform: translateY(to-rem(-30px));
 
-      @include respond(phone) {
+      @include respond(laptop) {
         width: to-rem(100px);
         height: to-rem(120px);
         transform: translate(to-rem(30px), to-rem(-50px));
@@ -119,12 +125,10 @@ section {
       width: to-rem(250px);
       transform: translateY(to-rem(-140px));
 
-      @include respond(phone) {
+      @include respond(laptop) {
         transform: translate(to-rem(-20px), to-rem(-140px));
-        @include respond(phone) {
-          width: to-rem(150px);
-          height: to-rem(250px);
-        }
+        width: to-rem(150px);
+        height: to-rem(250px);
       }
     }
   }
@@ -148,6 +152,11 @@ section {
     gap: to-rem(20px);
     width: 80%;
     margin: 0 auto;
+
+    @include respond(laptop) {
+      width: 100%;
+      grid-template-rows: repeat(2, to-rem(250px));
+    }
 
     @include respond(phone) {
       grid-template-columns: repeat(2, 1fr);
@@ -274,7 +283,7 @@ section {
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(to-rem(200px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(to-rem(300px), 1fr));
     column-gap: to-rem(20px);
 
     @include respond(phone) {
@@ -332,7 +341,7 @@ section {
   margin-top: to-rem(150px);
 
   @include respond(phone) {
-    margin-top: to-rem(70px);
+    margin-top: 0;
   }
 
   &__title {
@@ -360,6 +369,10 @@ section {
     column-gap: to-rem(150px);
     margin: 0 auto;
     width: 85%;
+
+    @include respond(laptop) {
+      row-gap: to-rem(90px);
+    }
 
     @include respond(phone) {
       row-gap: to-rem(70px);
@@ -579,6 +592,11 @@ section {
     & img {
       width: 100%;
       height: 100%;
+    }
+
+    @include respond(laptop) {
+      width: 100px;
+      height: 100px;
     }
 
     @include respond(phone) {

@@ -3,7 +3,7 @@ header {
   width: 100%;
   height: 100vh;
 
-  @include respond(phone) {
+  @include respond(laptop) {
     height: auto;
   }
 
@@ -12,17 +12,26 @@ header {
     grid-template-columns: 37% 63%;
 
     @include respond(phone) {
-      display: none;
+      grid-template-columns: 37% 63%;
     }
 
     &__logo {
       padding: to-rem(7px);
       margin-right: to-rem(81px);
 
+      @include respond(phone) {
+        margin-right: to-rem(1px);
+      }
+
       & img {
         margin: 0 auto;
         width: to-rem(180px);
         height: to-rem(60px);
+
+        @include respond(phone) {
+          width: to-rem(150px);
+          height: to-rem(50px);
+        }
       }
     }
 
@@ -34,11 +43,37 @@ header {
       align-items: center;
       justify-content: space-between;
       padding: 0 to-rem(100px);
+      position: relative;
+
+      @include respond(max-laptop) {
+        padding: 0 to-rem(10px);
+        height: to-rem(60px);
+      }
+
+      @include respond(tab) {
+        background-color: transparent;
+      }
 
       & ul {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include respond(tab) {
+          background-color: $col-grey-2;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 40vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          transform: translateY(-40vh);
+          transition: transform 0.5s;
+          z-index: 50;
+        }
       }
     }
 
@@ -49,12 +84,64 @@ header {
       margin: 0 to-rem(30px);
       display: inline-block;
       cursor: pointer;
+
+      @include respond(laptop) {
+        margin: 0 to-rem(15px);
+      }
+
+      @include respond(tab) {
+        margin: to-rem(20px);
+      }
     }
 
     &__icon {
       width: to-rem(20px);
       height: to-rem(30px);
       margin: 0 to-rem(17px);
+
+      @include respond(max-laptop) {
+        width: to-rem(15px);
+        height: to-rem(20px);
+        margin: 0 to-rem(10px);
+      }
+
+      @include respond(laptop) {
+        width: to-rem(15px);
+        height: to-rem(20px);
+        margin: 0 to-rem(10px);
+      }
+
+      @include respond(tab) {
+        display: none;
+      }
+    }
+
+    // MOBILE MENU BUTTON
+    .menu {
+      background: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      display: none;
+
+      svg {
+        fill: $col-grey-2;
+      }
+
+      @include respond(tab) {
+        display: block;
+        position: absolute;
+        z-index: 70;
+        right: to-rem(20px);
+      }
+    }
+
+    .change-color svg {
+      fill: $col-primary;
+    }
+
+    .active {
+      transform: translateY(0);
     }
   }
 }
@@ -65,6 +152,14 @@ header {
   display: flex;
   justify-content: space-between;
 
+  @include respond(laptop) {
+    height: calc(60vh - to-rem(85px));
+  }
+
+  @include respond(big-tab) {
+    height: 50vh;
+  }
+
   @include respond(phone) {
     flex-direction: column;
     height: auto;
@@ -74,6 +169,9 @@ header {
     padding: to-rem(90px) 0;
     width: 40%;
 
+    @include respond(laptop) {
+      width: 70%;
+    }
     @include respond(phone) {
       width: 100%;
     }
@@ -114,6 +212,10 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+
+    @include respond(laptop) {
+      width: to-rem(400px);
+    }
 
     @include respond(phone) {
       display: none;

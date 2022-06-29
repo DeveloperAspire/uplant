@@ -1,4 +1,3 @@
-
 // @mixin deskTopFirst($media) {
 //   @media screen and (max-width: math.div($media, 16) + rem) {
 //     @content;
@@ -61,6 +60,14 @@
     }
 
     // < 900px
+  }
+
+  @if $breakpoint==laptop {
+    @media only screen and (max-width: 62.5rem) {
+      @content;
+    }
+
+    // < 1000px
   }
 
   @if $breakpoint==mini-laptop {

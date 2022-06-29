@@ -26,10 +26,24 @@
 
   @include hero-text;
 
+  @include respond(big-tab) {
+    width: to-rem(150px);
+    height: to-rem(45px);
+    margin-right: to-rem(15px);
+  }
+
   @include respond(phone) {
     width: to-rem(150px);
     height: to-rem(45px);
     margin-right: to-rem(15px);
+  }
+
+  @include respond(max-laptop) {
+    margin-bottom: to-rem(15px);
+  }
+
+  @include respond(smallest-phone) {
+    margin-bottom: to-rem(25px);
   }
 
   &--cream {
