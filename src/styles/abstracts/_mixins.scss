@@ -7,7 +7,7 @@
 // MOBILE FIRST MEDIA QUERY
 @mixin respond($breakpoint) {
   @if $breakpoint==mini-phone {
-    @media only screen and (max-width: 21.875em) {
+    @media only screen and (max-width: 22.875em) {
       @content;
     }
 

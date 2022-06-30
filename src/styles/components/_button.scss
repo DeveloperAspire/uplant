@@ -42,7 +42,7 @@
     margin-bottom: to-rem(15px);
   }
 
-  @include respond(smallest-phone) {
+  @include respond(mini-phone) {
     margin-bottom: to-rem(25px);
     width: 100%;
   }

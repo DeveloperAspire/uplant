@@ -162,6 +162,11 @@ header {
 
   @include respond(phone) {
     flex-direction: column;
+    height: calc(10vh - to-rem(85px));
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
     height: auto;
   }
 
@@ -174,6 +179,7 @@ header {
     }
     @include respond(phone) {
       width: 100%;
+      padding: to-rem(10px) 0;
     }
   }
 
