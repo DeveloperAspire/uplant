@@ -44,6 +44,7 @@
 
   @include respond(smallest-phone) {
     margin-bottom: to-rem(25px);
+    width: 100%;
   }
 
   &--cream {
