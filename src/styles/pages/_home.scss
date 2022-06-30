@@ -538,8 +538,8 @@ section {
     width: to-rem(60px);
     height: to-rem(60px);
     border-radius: 50%;
-    outline: 1px solid hsl(0deg, 1%, 64%);
-    outline-offset: to-rem(2px);
+    border: 1px solid hsl(0deg, 1%, 64%);
+    padding: to-rem(2px);
     text-align: center;
     margin: 0 auto;
 
